@@ -43,6 +43,8 @@ while 1:
                 box = faces[0, 0, i, 3:7] * np.array([w, h, w, h])
                 (x, y, x1, y1) = box.astype("int")
                 cv2.rectangle(img, (x, y), (x1, y1), (0, 0, 255), 2)
+                
+                #saving faces..
                 detected_face=img[y:y1,x:x1]
                 detected_face=cv2.resize(detected_face,(160,160),cv2.INTER_AREA)
             #saving the detected face by pressing 'enter' button
@@ -52,6 +54,7 @@ while 1:
                 cv2.imwrite(str(j)+'.jpg',detected_face)
                 print('done')
                 j+=1
+                #saving faces...
         except:
             pass
                 

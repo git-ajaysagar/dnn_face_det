@@ -54,7 +54,7 @@ while 1:
                 cv2.imwrite(str(j)+'.jpg',detected_face)
                 print('done')
                 j+=1
-                #saving faces...
+            #saving faces...
         except:
             pass
                 
